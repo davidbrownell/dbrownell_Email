@@ -1,6 +1,6 @@
 [project]
 name = "dbrownell-Email"
-description = "Add your description here"
+description = "Email tools and utilities."
 readme = "README.md"
 authors = [
     { name = "David Brownell", email = "db@davidbrownell.com" }
