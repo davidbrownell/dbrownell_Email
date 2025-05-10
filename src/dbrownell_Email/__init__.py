@@ -6,3 +6,9 @@
 #   uv run python -m AutoGitSemVer.scripts.UpdatePythonVersion ./src/dbrownell_Email/__init__.py ./src
 #
 __version__ = "0.1.0"
+
+from .SmtpMailer import SmtpMailer
+
+__all__ = [
+    "SmtpMailer",
+]

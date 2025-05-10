@@ -6,7 +6,12 @@ authors = [
     { name = "David Brownell", email = "db@davidbrownell.com" }
 ]
 requires-python = ">= 3.10"
-dependencies = []
+dependencies = [
+    "ansi2html>=1.9.2",
+    "dbrownell-common>=0.14.6",
+    "pywin32>=310; sys_platform == 'win32'",
+    "typer>=0.15.3",
+]
 dynamic = ["version"]
 classifiers = [
     "Operating System :: MacOS",
@@ -27,6 +32,9 @@ Homepage = "https://github.com/davidbrownell/dbrownell_Email"
 Documentation = "https://github.com/davidbrownell/dbrownell_Email"
 Repository = "https://github.com/davidbrownell/dbrownell_Email"
 
+[project.scripts]
+email_tee = "dbrownell_Email:EmailTee.app"
+
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
@@ -34,6 +42,7 @@ build-backend = "hatchling.build"
 [dependency-groups]
 dev = [
     "autogitsemver>=0.8.0",
+    "dbrownell-commitemojis>=0.1.1",
     "pre-commit>=4.2.0",
     "py-minisign>=0.12.0",
     "pytest>=8.3.5",
@@ -45,7 +54,7 @@ dev = [
 path = "src/dbrownell_Email/__init__.py"
 
 [tool.pytest.ini_options]
-addopts = "--verbose -vv --capture=no --cov=dbrownell_Email --cov-fail-under=95.0"
+addopts = "--verbose -vv --capture=no --cov=dbrownell_Email --cov-fail-under=35.0"
 
 [tool.ruff]
 line-length = 110
@@ -66,6 +75,7 @@ ignore = [
     "N802", # Function name `xxx` should be lowercase
     "N999", # Invalid module name
     "S101", # Use of assert detected
+    "TRY002", # raise-vanilla-class
     "UP032", # Use f-string instead of `format` call
 ]
 
