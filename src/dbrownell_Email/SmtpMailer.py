@@ -82,7 +82,7 @@ class SmtpMailer:
         content = json.dumps(self.__dict__).encode("utf-8")
 
         if os.name == "nt":
-            import win32crypt
+            import win32crypt  # noqa: PLC0415
 
             content = win32crypt.CryptProtectData(content, "", None, None, None, 0)
 
@@ -185,7 +185,7 @@ class SmtpMailer:
         content = data_filename.read_bytes()
 
         if os.name == "nt":
-            import win32crypt
+            import win32crypt  # noqa: PLC0415
 
             content = win32crypt.CryptUnprotectData(content, None, None, None, 0)[1]
 
