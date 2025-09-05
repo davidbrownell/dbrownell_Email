@@ -107,8 +107,8 @@ def EntryPoint(  # noqa: D103
                     is_interactive=False,
                     supports_colors=True,
                     is_headless=True,
-                    no_column_warning=True,
                 ),
+                no_column_warning=True,
             )
 
             with running_dm.YieldStream() as dm_stream:
