@@ -1,5 +1,12 @@
 [project]
 name = "dbrownell-Email"
+version = "0.0.0"
+#          ^^^^^
+# Wheel names will be generated according to this value. Do not manually modify this value; instead
+# update it according to committed changes by running this command from the root of the repository:
+#
+#   uv run python -m AutoGitSemVer.scripts.UpdatePythonVersion ./pyproject.toml ./src
+
 description = "Email tools and utilities."
 readme = "README.md"
 authors = [
@@ -13,7 +20,6 @@ dependencies = [
     "typer>=0.15.3",
 ]
 
-dynamic = ["version"]
 classifiers = [
     "Operating System :: MacOS",
     "Operating System :: Microsoft :: Windows",
@@ -37,8 +43,8 @@ Repository = "https://github.com/davidbrownell/dbrownell_Email"
 email_tee = "dbrownell_Email:EmailTee.app"
 
 [build-system]
-requires = ["hatchling"]
-build-backend = "hatchling.build"
+requires = ["uv_build>=0.8.15,<0.9.0"]
+build-backend = "uv_build"
 
 [dependency-groups]
 dev = [
@@ -95,3 +101,6 @@ max-complexity = 15
 max-args = 10
 max-branches = 20
 max-returns = 20
+
+[tool.uv.build-backend]
+module-name = "dbrownell_Email"

@@ -4,7 +4,7 @@
 **Package:**
 [![PyPI - Python Version](https://img.shields.io/pypi/pyversions/dbrownell_Email?color=dark-green)](https://pypi.org/project/dbrownell_Email/)
 [![PyPI - Version](https://img.shields.io/pypi/v/dbrownell_Email?color=dark-green)](https://pypi.org/project/dbrownell_Email/)
-[![PyPI - Downloads](https://img.shields.io/pypi/dm/dbrownell_Email)](https://pypistats.org/packages/dbrownell_Email)
+[![PyPI - Downloads](https://img.shields.io/pypi/dm/dbrownell_Email)](https://pypistats.org/packages/dbrownell-email)
 
 **Development:**
 [![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv)
